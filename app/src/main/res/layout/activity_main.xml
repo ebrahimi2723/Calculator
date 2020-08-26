@@ -39,13 +39,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:layout_weight="16">
+        android:layout_weight="16"
+        android:background="#0D47A1">
 
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="0dp"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num1"
@@ -58,6 +59,7 @@
 
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num2"
@@ -69,6 +71,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num3"
@@ -84,12 +87,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="16"
+        android:background="#0D47A1"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num4"
@@ -101,6 +106,7 @@
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num5"
@@ -112,6 +118,7 @@
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num6"
@@ -127,12 +134,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="16"
+        android:background="#0D47A1"
         app:layout_constraintTop_toBottomOf="@+id/second_linearLayout">
 
         <Button
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num7"
@@ -144,6 +153,7 @@
             android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num8"
@@ -155,6 +165,7 @@
             android:id="@+id/button9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num9"
@@ -170,12 +181,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="16"
+        android:background="#0D47A1"
         app:layout_constraintTop_toBottomOf="@+id/tree_linearLayout">
 
         <Button
             android:id="@+id/button_plus"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="plus"
@@ -187,6 +200,7 @@
             android:id="@+id/button0"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="num0"
@@ -198,6 +212,7 @@
             android:id="@+id/buttonMines"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="negative"
@@ -213,12 +228,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="16"
+        android:background="#0D47A1"
         app:layout_constraintTop_toBottomOf="@+id/four_linearLayout">
 
         <Button
             android:id="@+id/button_mul"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="multi"
@@ -230,6 +247,7 @@
             android:id="@+id/button_assign"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="assign"
@@ -241,6 +259,7 @@
             android:id="@+id/button_divide"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="divide"
@@ -257,12 +276,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_weight="16"
+        android:background="#0D47A1"
         app:layout_constraintTop_toBottomOf="@+id/five_linearLayout">
 
         <Button
             android:id="@+id/button_clear"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="clear"
@@ -274,6 +295,7 @@
             android:id="@+id/button_point"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:background="#1E88E5"
             android:onClick="point"

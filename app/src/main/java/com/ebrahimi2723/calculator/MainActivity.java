@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -196,32 +197,34 @@ int order=0;
     }
     public void assign(View view) {
         float result = 0;
-        String finalResult="";
+        String final_result="";
         switch (order){
             case 1:
                 result= firstNum+secondNum;
                 firstNum=result;
-                finalResult=removeZero(result);
+                final_result = standardFormat(result+"");
 
                break;
             case 2:
                 result=firstNum-secondNum;
                 firstNum=result;
-                finalResult=removeZero(result);
+                final_result = standardFormat(result+"");
+
                 break;
             case 3:
                 result= firstNum * secondNum;
                 firstNum=result;
-                finalResult=removeZero(result);
+                final_result = standardFormat(result+"");
+
                 break;
             case  4:
                 result=firstNum/secondNum;
                 firstNum=result;
-                finalResult=removeZero(result);
+                final_result = standardFormat(result+"");
                 break;
         }
         TextView screen = findViewById(R.id.result);
-        screen.setText(finalResult);
+        screen.setText(final_result);
     }
     public void divide(View view) {
         order=4;
@@ -240,21 +243,42 @@ int order=0;
 
     }
     public void point(View view) {
-        if (findPoint()==false && !screen_content.isEmpty()){
-            if (countStringIsBig(screen_content)){
-                if (isFirstNum){
-                    screen_content=screen_content+".";
-                    firstNum=Float.parseFloat(screen_content);
-                }else{
-                    screen_content=screen_content+".";
-                    secondNum=Float.parseFloat(screen_content);
+        if (!screen_content.startsWith("-")) {
+            if (findPoint() == false && !screen_content.isEmpty()) {
+                if (countStringIsBig(screen_content)) {
+                    if (isFirstNum) {
+                        screen_content = screen_content + ".";
+                        firstNum = Float.parseFloat(screen_content);
+                    } else {
+                        screen_content = screen_content + ".";
+                        secondNum = Float.parseFloat(screen_content);
+                    }
+                    TextView screen = findViewById(R.id.result);
+                    screen.setText(screen_content);
                 }
-                TextView screen = findViewById(R.id.result);
-                screen.setText(screen_content);
-            }
 //        Log.i(" secondNum:",secondNum+"");
-        }
+            }
 //        Log.i(" firstNum:",firstNum+"");
+        }else if(screen_content.startsWith("-0") || screen_content.startsWith("-1") || screen_content.startsWith("-2")
+                || screen_content.startsWith("-3")|| screen_content.startsWith("-4") || screen_content.startsWith("-5")
+                || screen_content.startsWith("-6")|| screen_content.startsWith("-7")|| screen_content.startsWith("-8")
+                || screen_content.startsWith("-9")){
+
+            if (findPoint() == false && !screen_content.isEmpty()) {
+                if (countStringIsBig(screen_content)) {
+                    if (isFirstNum) {
+                        screen_content = screen_content + ".";
+                        firstNum = Float.parseFloat(screen_content);
+                    } else {
+                        screen_content = screen_content + ".";
+                        secondNum = Float.parseFloat(screen_content);
+                    }
+                    TextView screen = findViewById(R.id.result);
+                    screen.setText(screen_content);
+                }
+//        Log.i(" secondNum:",secondNum+"");
+            }
+        }
     }
     public boolean  countStringIsBig(String s){
 
@@ -283,12 +307,15 @@ int order=0;
             return false;
         }
     }
-    public  String removeZero(float value){
-        DecimalFormat formatter = new DecimalFormat("0");
-        DecimalFormat decimalFormatter = new DecimalFormat("0.0000000");
-        String s;
-        if (value % 1L > 0L) s = decimalFormatter.format(value);
-        else s = formatter.format(value);
-        return s;
+    //Remove ".0" from final result
+    public String standardFormat(String value){
+        if (value.indexOf("0")==value.length()-1 && value.indexOf(".")==value.length()-2 ){
+
+//            Toast.makeText(MainActivity.this,"i'm work",Toast.LENGTH_LONG).show();
+          value=value.substring(0,value.length()-1);
+          value=value.substring(0,value.length()-1);
+        }
+        return value;
     }
+
 }
